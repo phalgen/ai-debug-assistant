@@ -1,0 +1,20 @@
+[
+    {
+        "input_error": "pancakes",
+        "analysis": {
+            "rule_based": "General error. Check logic.",
+            "similar_error": "NameError: name is not defined",
+            "fix": "Variable is not declared. Make sure it is defined before use."
+        },
+        "timestamp": "2026-04-12 17:15:38.177799"
+    },
+    {
+        "input_error": "TypeError: unsupported operand type(s) for +: 'int' and 'str'",
+        "analysis": {
+            "rule_based": "Type mismatch. You may be trying to combine incompatible data types.",
+            "similar_error": "TypeError: unsupported operand type(s)",
+            "fix": "This happens when combining incompatible types. Convert types using int() or str()."
+        },
+        "timestamp": "2026-04-12 18:25:40.005660"
+    }
+]
