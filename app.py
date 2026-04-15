@@ -73,15 +73,41 @@ if analyze_clicked:
     st.subheader("🛠 Suggested Fix")
     st.code(data["analysis"]["fix"], language="python")
 
+    st.subheader("📘 Explanation")
+    st.write(data["analysis"]["explanation"])
+
+    st.subheader("💡 Example Fix")
+    st.code(data["analysis"]["example"], language="python")
+
+    st.subheader("📊 Confidence")
+    st.progress(data["analysis"]["confidence"])
+
+    # ✅ FIXED LOCATION
+    if data["analysis"].get("typo_detected"):
+        st.subheader("⚠️ Possible Typo")
+        st.warning(
+            f"You wrote '{data['analysis']['typo_detected']['typo']}' "
+            f"did you mean '{data['analysis']['typo_detected']['suggestion']}'?"
+        )
+
     st.caption(f"⏱ {data['timestamp']}")
 
 # Divider
 st.markdown("---")
 
 # Recent history
-st.subheader("📜 Recent Analyses")
+if analyze_clicked:
+    st.markdown("---")
+    st.subheader("📜 Recent Analyses")
 
-memory = load_memory()
-for item in memory[-3:][::-1]:
-    with st.expander("🔹 " + item["input_error"][:60]):
-        st.json(item)
+    memory = load_memory()
+    for item in memory[-3:][::-1]:
+        with st.expander("🔹 " + item["input_error"][:60]):
+            st.json(item)
+
+
+    st.subheader("⚠️ Possible Typo")
+    st.warning(
+        f"You wrote '{data['analysis']['typo_detected']['typo']}' "
+        f"did you mean '{data['analysis']['typo_detected']['suggestion']}'?"
+    )

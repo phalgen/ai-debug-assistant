@@ -16,5 +16,78 @@
             "fix": "This happens when combining incompatible types. Convert types using int() or str()."
         },
         "timestamp": "2026-04-12 18:25:40.005660"
+    },
+    {
+        "error": "ERROR!\nTraceback (most recent call last):\n  File \"<main.py>\", line 3, in <module>\nNameError: name 'prit' is not defined. Did you mean: 'print'?\n",
+        "analysis": {
+            "rule_based": "Variable not defined.",
+            "similar_error": "NameError: name is not defined",
+            "fix": "Variable is not declared. Make sure it is defined before use.",
+            "confidence": 0.6137298345565796,
+            "explanation": "Check the error message carefully and debug step by step.",
+            "example": "Verify variable values and logic."
+        },
+        "timestamp": "2026-04-13T11:36:03.388309"
+    },
+    {
+        "error": "ERROR!\nTraceback (most recent call last):\n  File \"<main.py>\", line 3, in <module>\nNameError: name 'prin' is not defined. Did you mean: 'print'?",
+        "analysis": {
+            "rule_based": "Variable not defined.",
+            "similar_error": "NameError: name is not defined",
+            "fix": "Variable is not declared. Make sure it is defined before use.",
+            "confidence": 0.6292917728424072,
+            "explanation": "Check the error message carefully and debug step by step.",
+            "example": "Verify variable values and logic.",
+            "typo_detected": {
+                "typo": "in",
+                "suggestion": "int"
+            }
+        },
+        "timestamp": "2026-04-13T12:39:13.585935"
+    },
+    {
+        "error": "ERROR!\nTraceback (most recent call last):\n  File \"<main.py>\", line 3, in <module>\nNameError: name 'prin' is not defined. Did you mean: 'print'?",
+        "analysis": {
+            "rule_based": "Variable not defined.",
+            "similar_error": "NameError: name is not defined",
+            "fix": "Variable is not declared. Make sure it is defined before use.",
+            "confidence": 0.6292917728424072,
+            "explanation": "Check the error message carefully and debug step by step.",
+            "example": "Verify variable values and logic.",
+            "typo_detected": {
+                "typo": "in",
+                "suggestion": "int"
+            }
+        },
+        "timestamp": "2026-04-13T12:45:54.003604"
+    },
+    {
+        "error": "ERROR!\nTraceback (most recent call last):\n  File \"<main.py>\", line 3, in <module>\nNameError: name 'prin' is not defined. Did you mean: 'print'?",
+        "analysis": {
+            "rule_based": "Variable not defined.",
+            "similar_error": "NameError: name is not defined",
+            "fix": "Variable is not declared. Make sure it is defined before use.",
+            "confidence": 0.6292917728424072,
+            "explanation": "Check the error message carefully and debug step by step.",
+            "example": "Verify variable values and logic.",
+            "typo_detected": {
+                "typo": "in",
+                "suggestion": "int"
+            }
+        },
+        "timestamp": "2026-04-13T12:49:59.128998"
+    },
+    {
+        "error": "print(error)",
+        "analysis": {
+            "rule_based": "General error. Check logic.",
+            "similar_error": "SyntaxError: invalid syntax",
+            "fix": "Check missing brackets, colons, or indentation.",
+            "confidence": 0.4973905384540558,
+            "explanation": "Check the error message carefully and debug step by step.",
+            "example": "Verify variable values and logic.",
+            "typo_detected": null
+        },
+        "timestamp": "2026-04-15T10:31:31.885542"
     }
 ]
